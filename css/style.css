@@ -11,34 +11,47 @@ html, body {
     min-height: 100%;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    background: none;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #7aa5d2;
+    border-radius: 25px;
+}
+
+/*Header*/
+
 header{
-    display: grid;
+    display: flex;
     background-color: #7aa5d2;
     box-shadow: 0 0 15px black;
-    grid-template-columns: 1fr 1fr 1fr;
     height: 100px;
+    margin-bottom: 50px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#searchbox{
-    margin-top: 35px;
-}
-
-#searchbox input{
+#searchbox {
     border-radius: 25px;
     width: 700px;
     height: 30px;
     text-align: center;
     border: none;
-    
 }
 
-#searchbox input:focus, textarea:focus{
+#searchbox:focus, #searchbox textarea:focus{
     outline: none;
 }
 
-#header-nav {
-    margin-top: 20px;
-    margin-left: 40%;
+#searchbox:focus::placeholder {
+    color: transparent;
 }
 
 #shoppingcart {
@@ -56,7 +69,13 @@ header{
     transition: all 0.4s;
 }
 
+#header-nav {
+    display: flex;
+    margin-right: 10px;
+}
+
 #header-nav button:hover{
+    max-height: 100%;
     background-color: #508fd3;
 }
 
@@ -68,16 +87,8 @@ header{
     padding-top: -30px;
 }
 
-
-#header-nav #shoppingcart:hover{
-    background-color: #FAC846;
-}
-
 #logo{
     margin-left: 20px;
-}
-
-#logo img{
     width: 100px;
 }
 
@@ -85,9 +96,17 @@ header{
     cursor: pointer;
 }
 
+#shoppingcart:hover{
+    background-color: #FAC846;
+}
+
 #shoppingcart img {
     /* mudar cor do SVG https://codepen.io/sosuke/pen/Pjoqqp */
     filter: invert(100%) sepia(0%) saturate(7479%) hue-rotate(70deg) brightness(99%) contrast(107%);
+}
+
+#shoppingcart p {
+    color: white;
 }
 
 #header-navbottom{
@@ -113,17 +132,183 @@ header{
     font-weight: 600;
     text-decoration: none;
     padding-left: 20px;
-
+    transition: all 0.5s;
 }
 
 #itens a:hover{
     color: rgb(201, 201, 201);
 }
 
-footer {
+/*Header*/
+/*-------------------------------------------------------------*/
+/*Banner*/
+
+#initial-banner{
+    position: relative;
+    margin: 50px 50px;
+    border-radius: 25px;
+    height: 50%;
+}
+
+.banner-img{
+    animation: slideshow-fading 10s infinite;
+    position: relative;
+    width: 100%;
+    border-radius: 25px;
+    z-index: 1;
+    transition: all .5s;
+}
+
+#left-button, #right-button{
+    cursor: pointer;
+    background: none;
     position: absolute;
-    bottom: 0;
+    top: 50%;
+    /* margin: 0 15px; */
+    z-index: 2;
+    filter: invert(100%) sepia(0%) saturate(7479%) hue-rotate(70deg) brightness(99%) contrast(107%);
+}
+
+#right-button {
+    right: 0;
+    margin-right: 10px;
+    transform: translate(0, -50%);
+}
+
+#left-button {
+    left: 0;
+    transform: translate(50%, -50%);
+}
+
+/*Banner*/
+/*-------------------------------------------------------------*/
+/*Buy-Box*/
+
+#buy-container{
+    float: right;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    box-shadow: 0 0 10px;
+    width: 730px;
+    border-radius: 25px;
+    background-color: #d2d3d8;
+    margin-right: 50px;
+}
+
+.titles{
+    background-color: #FAC846;
+    margin-left: 255px;
+    text-align: center;
+    border-radius: 25px;
+    width: 150px;
+    box-shadow: 0 0 10px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+#buy-section{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-row-gap: 20px;
+    background-color: #d2d3d8;
+    
+}
+
+
+
+.buy-box{
+    box-shadow: 0 0 10px black;
+    border-radius: 25px;
+    width: 200px;
+    height: 350px;
+    transition: all 0.5s;
+    background-color: white;
+}
+
+.buy-box:hover{
+    box-shadow: 0 0 20px;
+}
+
+.img-buybox{
+    display: flex;
+    width: 100%;
+    background-color: #7aa5d2;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    border-bottom: 1px solid black;
+}
+
+.buy-img{
+    width: 100px;
+    height: 165px;
+    border-radius: 25px;
+}
+
+.description{
+    margin: 10px;
+}
+
+.description h3{
+    display: inline-block;
+}
+
+.description h4{
+    float: right;
+}
+
+.description p{
+    margin-top: 10px;
+}
+
+.div-add-button{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.add-button{
+    margin-top: 15px;
+    border-radius: 20px;
+    width: 150px;
+    height: 30px;
+    background-color: #7aa5d2;
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.add-button:hover{
+    background-color: #FAC846;
+    box-shadow: 0 0 10px;
+}
+/*Buy-Box*/
+/*-------------------------------------------------------------*/
+footer {
     width: 100%;
     text-align: center;
     padding: 10px;
+    
+}
+
+@keyframes slideshow-fading {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }

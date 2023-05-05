@@ -5,26 +5,23 @@
         <meta name="viewport" content="initial-scale=1.0, width=device-width">
         <link rel="shortcut icon" href="" type="image/x-icon">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <title>Vem Ka Compra</title>
+        <link rel="shortcut icon" href="assets/logoA.png" type="image/x-icon">
+        
+        <script defer src="js/slideshow.js"></script>
+
+        <title>Supermercado A</title>
     </head>
 
     <body>
         <header>
-            <div id="logo">
-                <img src="images/logo.png">
-            </div>
+            <img id="logo" src="assets/logoA.png">
             
-            <div id="searchbox">
-                <input type="text" placeholder="       O que deseja?">
-            </div>
+            <input id="searchbox" type="text" placeholder="O que deseja?">
 
             <nav id="header-nav">
-                <button>
-                    <a href="#promocoes">Promoções</a>
-                </button>
                 <button id="shoppingcart">
-                    <img src="images/svg/shoppingcart.svg">
+                    <img src="assets/svg/shoppingcart.svg">
+                    <p>R$13,00</p>
                 </button>
             </nav>
 
@@ -45,70 +42,148 @@
         
 
         <main>
+            <section id="initial-banner">
+                <div class="banner">
+                    <img src="assets/banners/carne.jpg" alt="" class="banner-img">
+                    <img src="assets/banners/carne2.jpg" alt="" class="banner-img">
+                    <img src="assets/banners/vinho-preto.jpg" alt="" class="banner-img">
+                    <img src="assets/banners/vinho.jpg" alt="" class="banner-img">
+                </div>
+                    
+                <div id="banner-buttons">
+                    <button class="buts" id="left-button"><img src="assets/svg/arrowback.svg" alt=""></button>
+                    <button class="buts" id="right-button"><img src="assets/svg/arrowforward.svg" alt=""></button>
+                </div>
+                    
+                <div id="hud-scroll">
 
-            <section class="content-container">
+                </div>
                 
             </section>
-
             <section class="content-container">
-                <img src="images/produtos/img1.png" alt="">
-                <img src="images/produtos/img2.png" alt="">
-                <img src="images/produtos/img3.png" alt="">
-                <img src="images/produtos/img4.png" alt="">
-                <img src="images/produtos/img5.png" alt="">
-                <img src="images/produtos/img6.png" alt="">
-                <img src="images/produtos/img7.png" alt="">
-                <img src="images/produtos/img8.png" alt="">
-                <img src="images/produtos/img9.png" alt="">
-                <img src="images/produtos/img10.png" alt="">
-                <img src="images/produtos/img11.png" alt="">
-                <img src="images/produtos/img12.png" alt="">
-                <img src="images/produtos/img13.png" alt="">
-                <img src="images/produtos/img14.png" alt="">
-                <img src="images/produtos/img15.png" alt="">
-                <img src="images/produtos/img16.png" alt="">
-                <img src="images/produtos/img17.png" alt="">
-                <img src="images/produtos/img18.png" alt="">
-                <img src="images/produtos/img19.png" alt="">
-                <img src="images/produtos/img20.png" alt="">
-                <img src="images/produtos/img21.png" alt="">
-                <img src="images/produtos/img22.png" alt="">
-                <img src="images/produtos/img23.png" alt="">
-                <img src="images/produtos/img24.png" alt="">
-                <img src="images/produtos/img25.png" alt="">
-                <img src="images/produtos/img26.png" alt="">
-                <img src="images/produtos/img27.png" alt="">
-                <img src="images/produtos/img28.png" alt="">
-                <img src="images/produtos/img29.png" alt="">
-                <img src="images/produtos/img30.png" alt="">
-                <img src="images/produtos/img31.png" alt="">
-                <img src="images/produtos/img32.png" alt="">
-                <img src="images/produtos/img33.png" alt="">
-                <img src="images/produtos/img34.png" alt="">
-                <img src="images/produtos/img35.png" alt="">
-                <img src="images/produtos/img36.png" alt="">
-                <img src="images/produtos/img37.png" alt="">
-                <img src="images/produtos/img38.png" alt="">
-                <img src="images/produtos/img39.png" alt="">
-                <img src="images/produtos/img40.png" alt="">
-                <img src="images/produtos/img41.png" alt="">
-                <img src="images/produtos/img42.png" alt="">
-                <img src="images/produtos/img43.png" alt="">
-                <img src="images/produtos/img44.png" alt="">
-                <img src="images/produtos/img45.png" alt="">
-                <img src="images/produtos/img46.png" alt="">
-                <img src="images/produtos/img47.png" alt="">
-                <img src="images/produtos/img48.png" alt="">
-                <img src="images/produtos/img49.png" alt="">
-                <img src="images/produtos/img50.png" alt="">
-                <img src="images/produtos/img51.png" alt="">
+                <section id="buy-container">
+                    <div class="titles">
+                        <h2>Produtos</h2>
+                    </div>
+                    <section id="buy-section">
+                        <div class="buy-box">
+                            <div class="img-buybox">
+                                <img src="assets/produtos/img15.png" alt="" class="buy-img">
+                                
+                            </div>
+                                <div class="description">
+                                    <h3>
+                                        Leite Moça
+                                    </h3>
+                                    <h4>
+                                        R$3,99
+                                    </h4>
+                                    <p>
+                                        Leitinho Gostosinho da Moça
+                                    </p>
+                                </div>
+                                <div class="div-add-button">
+                                    <button class="add-button">Adicionar ao Carrinho</button>
+                                </div>
+                                
+                        </div>
+                        <div class="buy-box">
+                            <div class="img-buybox">
+                                <img src="assets/produtos/img13.png" alt="" class="buy-img">
+                                
+                            </div>
+                                <div class="description">
+                                    <h3>
+                                        Blueville
+                                    </h3>
+                                    <h4>
+                                        R$3,99
+                                    </h4>
+                                    <p>
+                                        Leitinho Gostosinho da Moça
+                                    </p>
+                                </div>
+                                <div class="div-add-button">
+                                    <button class="add-button">Adicionar ao Carrinho</button>
+                                </div>
+                                
+                        </div>
+                        <div class="buy-box">
+                            <div class="img-buybox">
+                                <img src="assets/produtos/img11.png" alt="" class="buy-img">
+                                
+                            </div>
+                                <div class="description">
+                                    <h3>
+                                        Toscaninha
+                                    </h3>
+                                    <h4>
+                                        R$3,99
+                                    </h4>
+                                    <p>
+                                        Leitinho Gostosinho da Moça
+                                    </p>
+                                </div>
+                                <div class="div-add-button">
+                                    <button class="add-button">Adicionar ao Carrinho</button>
+                                </div>
+                                
+                        </div>
+                        <div class="buy-box">
+                            <div class="img-buybox">
+                                <img src="assets/produtos/img10.png" alt="" class="buy-img">
+                                
+                            </div>
+                                <div class="description">
+                                    <h3>
+                                        Linguiçinha
+                                    </h3>
+                                    <h4>
+                                        R$3,99
+                                    </h4>
+                                    <p>
+                                        Leitinho Gostosinho da Moça
+                                    </p>
+                                </div>
+                                <div class="div-add-button">
+                                    <button class="add-button">Adicionar ao Carrinho</button>
+                                </div>
+                                
+                        </div>
+                        <div class="buy-box">
+                            <div class="img-buybox">
+                                <img src="assets/produtos/img9.png" alt="" class="buy-img">
+                                
+                            </div>
+                                <div class="description">
+                                    <h3>
+                                        Vegetais
+                                    </h3>
+                                    <h4>
+                                        R$3,99
+                                    </h4>
+                                    <p>
+                                        Leitinho Gostosinho da Moça
+                                    </p>
+                                </div>
+                                <div class="div-add-button">
+                                    <button class="add-button">Adicionar ao Carrinho</button>
+                                </div>
+                                
+                        </div>
+                    </section>
+                    
+                    
+                </section>
+                    
             </section>
-
         </main>
 
         <footer>
-            VemKa Compra Supermercados&trade; - All Rights Reserved &copy;
+            Supermercado A&trade; - Todos direitos reservados &copy;
+            ByakkoLord | Speed | Mat | Mar
         </footer>
+
     </body>
 </html>
 
