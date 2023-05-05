@@ -192,12 +192,10 @@ header{
     box-shadow: 0 0 10px;
     width: 730px;
     border-radius: 25px;
-    background-color: #d2d3d8;
     margin-right: 50px;
 }
 
 .titles{
-    background-color: #FAC846;
     margin-left: 255px;
     text-align: center;
     border-radius: 25px;
@@ -211,7 +209,6 @@ header{
     display: grid;
     grid-template-columns: repeat(3, 3fr);
     grid-row-gap: 20px;
-    background-color: #d2d3d8;
     
 }
 
@@ -233,6 +230,7 @@ header{
 .img-buybox{
     display: flex;
     width: 100%;
+    height: 185px;
     background-color: #7aa5d2;
     justify-content: center;
     padding-top: 10px;
@@ -243,7 +241,6 @@ header{
 
 .buy-img{
     width: 100px;
-    height: 165px;
     border-radius: 25px;
 }
 
@@ -288,6 +285,39 @@ header{
 }
 /*Buy-Box*/
 /*-------------------------------------------------------------*/
+/*Filter-Container*/
+
+#filter-container{
+    display: inline-block;
+    margin-left: 50px;
+    box-shadow: 0 0 10px;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+#filter-container h2{
+    box-shadow: 0 0 10px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 900;
+
+}
+
+#types{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    padding-top: 15px;
+}
+
+#value{
+    padding-top: 10px;
+}
+
+#types input, #value input{
+    margin-top: 5px;
+}
+
+/*Filter-Container*/
 footer {
     width: 100%;
     text-align: center;
