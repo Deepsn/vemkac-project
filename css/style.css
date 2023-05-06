@@ -9,6 +9,9 @@
 
 html, body {
     min-height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow: auto;
 }
 
 body {
@@ -24,6 +27,10 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb{
     background-color: #7aa5d2;
     border-radius: 25px;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background-color: #5093da;
 }
 
 /*Header*/
@@ -79,6 +86,36 @@ header{
     background-color: #508fd3;
 }
 
+#scrollnav{
+    display: flex;
+    margin-right: 20%;
+    
+}
+
+#scrollnav a{
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.2em;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+#scrollnav button{
+    border-radius: 20px;
+    background: none;
+    height: 40px;
+    padding-right: 20px;
+    border: none;
+    transition: all 0.5s;
+    margin-top: 4px;
+    margin-left: 20px;
+}
+
+#scrollnav button:hover{
+    background-color: #fac746a2;
+}
+
 #header-nav a {
     color: white;
     font-size: 1.2em;
@@ -87,12 +124,12 @@ header{
     padding-top: -30px;
 }
 
-#logo{
+.logo{
     margin-left: 20px;
     width: 100px;
 }
 
-#logo:hover{
+.logo:hover{
     cursor: pointer;
 }
 
@@ -125,6 +162,8 @@ header{
 #itens{
     margin-top: 12px;
     margin-right: 50px;
+    border-left: 2px solid white;
+    margin-bottom: 10px;
 }
 
 #itens a{
@@ -163,6 +202,7 @@ header{
     cursor: pointer;
     background: none;
     position: absolute;
+    border: none;
     top: 50%;
     /* margin: 0 15px; */
     z-index: 2;
@@ -181,6 +221,94 @@ header{
 }
 
 /*Banner*/
+
+.content-container{
+    border-top: 5px solid #7aa5d2;
+    padding-top: 50px;
+    border-radius: 25px;
+    border-bottom: 5px solid #7aa5d2;
+    height: 940px;
+    width: 95vw;
+    margin-left: 2%;
+    box-shadow: 0 0 10px;
+}
+
+/*-------------------------------------------------------------*/
+/*Best-container*/
+
+#best-container{
+    border-top: 5px solid #7aa5d2;
+    border-radius: 25px;
+    border-bottom: 5px solid #7aa5d2;
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px;
+    width: 95vw;
+    margin-left: 2%;
+}
+
+#titlebest{
+    text-align: center;
+    border-radius: 25px;
+    width: 90%;
+    box-shadow: 0 0 10px;
+    margin: 15px auto;
+}
+
+#promo-container{
+    display: grid;
+    margin-left: 8%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    grid-template-columns: repeat(6, 0fr);
+    grid-gap: 7%;
+}
+
+.promo-box{
+    width: 100px;
+}
+
+.promo-img{
+    position: relative;
+    z-index: 1;
+}
+
+.promoimg-img{
+    width: 100px;
+    height: 100px;
+}
+
+.promo-percent{
+    position: relative;
+    width: 45px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #FAC846;
+    text-align: center;
+    z-index: 2;
+    box-shadow: 0 0 10px;
+    top: -110px;
+}
+
+.promo-percent span{
+    font-weight: 900;
+}
+
+.promo-price{
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    background-color: #FAC846;
+    text-align: center;
+    box-shadow: 0 0 5px;
+}
+
+.promo-price span{
+    font-weight: 900;
+    padding-bottom: 10px;
+    line-height: 1.9;
+}
+
+/*Best-container*/
 /*-------------------------------------------------------------*/
 /*Buy-Box*/
 
@@ -196,10 +324,10 @@ header{
 }
 
 .titles{
-    margin-left: 255px;
+    margin-left: 20px;
     text-align: center;
     border-radius: 25px;
-    width: 150px;
+    width: 90%;
     box-shadow: 0 0 10px;
     margin-top: -20px;
     margin-bottom: 20px;
@@ -211,8 +339,6 @@ header{
     grid-row-gap: 20px;
     
 }
-
-
 
 .buy-box{
     box-shadow: 0 0 10px black;
@@ -231,12 +357,11 @@ header{
     display: flex;
     width: 100%;
     height: 185px;
-    background-color: #7aa5d2;
+    background-image: linear-gradient(to bottom, #508fd3, white);
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 25px;
-    border-bottom: 1px solid black;
 }
 
 .buy-img{
@@ -318,6 +443,139 @@ header{
 }
 
 /*Filter-Container*/
+/*-------------------------------------------------------------*/
+/*Cart-Menu*/
+
+#cart{
+    border-top: 6px solid #5093da;
+    border-bottom: 6px solid #5093da;
+    background-color: #eef5fc;
+    width: 300px;
+    border-radius: 25px;
+    height: 350px;
+    box-shadow: -10px 10px 25px;
+
+}
+
+#cart h3{
+    text-align: center;
+    border-bottom: 5px solid #FAC846;
+    font-size: 1.5em;
+    padding-bottom: 5px;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+#cart-products{
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid black;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.cart-img-products{
+    margin: auto;
+}
+
+#cart-products p{
+    font-weight: 900;
+    line-height: 100px;
+    margin-right: 50px;
+}
+
+#cart-products span{
+    font-weight: 900;
+    font-size: 1.3em;
+    margin-right: 20px;
+    line-height: 100px;
+    border-bottom: 5px solid #FAC846;
+    border-top: 5px solid #FAC846;
+    border-radius: 15px;
+}
+
+
+
+.image-carts{
+    height: 80px;
+}
+
+/*Cart-Menu*/
+/*-------------------------------------------------------------*/
+/*Footer*/
+
+#all-info{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    padding-left: 10%;
+    box-shadow: 0 0 10px;
+    border-radius: 25px;
+    border-top: 5px solid #5093da;
+    border-bottom: 5px solid #5093da;
+    height: 250px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.block-info{
+    text-align: justify;
+    width: 150px;
+    margin-top: 55px;
+}
+
+.block-info ul{
+    list-style-type: none;
+}
+
+#all-info h2{
+    color: #508fd3;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+#all-info li a{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.9em;
+    text-decoration: none;
+    line-height: 24px;
+}
+
+#all-info li a:hover{
+    color: #FAC846;
+    text-decoration: underline;
+}
+
+#pay-block{
+    border-left: 1px solid black;
+    margin-bottom: 30px;
+    margin-right: 50px;
+    margin-top: 35px;
+    width: 350px;
+}
+
+#pay-block h2{
+    color: #5093da;
+    padding-left: 30px;
+}
+
+#pay-block p{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.8em;
+    padding-left: 30px;
+}
+
+#pay-block-img{
+    display: grid;
+    margin-left: 30px;
+    margin-top: 15px;
+    grid-template-columns: repeat(4, 2fr);
+    grid-row-gap: 15px;
+}
+
+/*Footer*/
+
 footer {
     width: 100%;
     text-align: center;
