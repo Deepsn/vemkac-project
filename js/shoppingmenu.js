@@ -1,6 +1,7 @@
 const shoppingCartButton = document.querySelector("#shoppingcart");
 const shoppingCartMenu = document.querySelector("#cart");
 const addToCartButtons = document.querySelectorAll(".add-button");
+const clearAllCartButton = cart.querySelector("#delete-all > button");
 let shoppingCart = localStorage.getItem("shoppingCart");
 
 if (!shoppingCart) {
@@ -14,6 +15,50 @@ if (!shoppingCart) {
         shoppingCart = [];
         console.error("Erro ao ler o carrinho de compras", error);
     }
+    
+}
+
+function listenForClicks(cartCard, item) {
+    const removeButton = cartCard.querySelector(".delete-singular");
+    const upQntButton = cartCard.querySelector("#up-qnt-button");
+    const downQntButton = cartCard.querySelector("#down-qnt-button");
+
+    if (!removeButton || !upQntButton || !downQntButton) {
+        console.error("Não foi possível encontrar os botões de remoção e alteração de quantidade");
+        return;
+    }
+
+    let removeItem = () => {
+        shoppingCart.splice(shoppingCart.indexOf(item), 1);
+        update();
+    };
+    
+    let upQnt = () => {
+        item.quantidade++;
+        update();
+    };
+    
+    let downQnt = () => {
+        item.quantidade--;
+        
+        if (item.quantidade <= 0) {
+            removeItem();
+            return;
+        }
+
+        update();
+    };
+    
+    let update = () => {
+        removeButton.removeEventListener("click", removeItem);
+        upQntButton.removeEventListener("click", upQnt);
+        downQntButton.removeEventListener("click", downQnt);
+        updateCart();
+    }
+
+    removeButton.addEventListener("click", removeItem);
+    upQntButton.addEventListener("click", upQnt);
+    downQntButton.addEventListener("click", downQnt);
 }
 
 function updateCart() {
@@ -24,6 +69,7 @@ function updateCart() {
 
     for (const item of shoppingCart) {
         if (!item) continue;
+        if (item.quantidade <= 0) continue;
 
         const cartCard = cartTemplate.cloneNode(true);
         const cartCardImg = cartCard.querySelector("img");
@@ -31,10 +77,15 @@ function updateCart() {
         const cartItemPrice = cartCard.querySelector("span");
         const cartItemAmount = cartCard.querySelector("span:nth-child(4)");
 
-        cartItemName.innerText = item.nome;
-        cartItemPrice.innerText = item.preco;
-        cartItemAmount.innerText = item.quantidade + "x";
-        cartCardImg.src = item.imagem;
+        function updateItem() {
+            cartItemName.innerText = item.nome;
+            cartItemPrice.innerText = item.preco;
+            cartItemAmount.innerText = item.quantidade + "x";
+            cartCardImg.src = item.imagem;
+        }
+
+        listenForClicks(cartCard, item);
+        updateItem();
 
         cartCard.id = "cart-products";
         shoppingCartMenu.appendChild(cartCard);
@@ -108,6 +159,11 @@ shoppingCartButton.addEventListener("click", () => {
 
 addToCartButtons.forEach(button => {
     button.addEventListener("click", onAddToCartClick);
+});
+
+clearAllCartButton.addEventListener("click", () => {
+    shoppingCart = [];
+    updateCart();
 });
 
 updateCart();
