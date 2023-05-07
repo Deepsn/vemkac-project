@@ -15,7 +15,6 @@ if (!shoppingCart) {
         shoppingCart = [];
         console.error("Erro ao ler o carrinho de compras", error);
     }
-    
 }
 
 function listenForClicks(cartCard, item) {
@@ -100,7 +99,6 @@ function updateCart() {
     }
 
     totalPrice.innerText = "R$ " + total.toFixed(2).replaceAll(".", ",");
-
     localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
 }
 
@@ -123,7 +121,6 @@ function addToCart(nome, preco, imagem) {
     shoppingCart = shoppingCart.filter(item => item.quantidade > 0).filter(item => item);
     updateCart();
 }
-
 
 function onAddToCartClick(event) {
     const itemCart = event.target.parentElement.parentElement;
@@ -150,7 +147,6 @@ function onAddToCartClick(event) {
 
     addToCart(name.innerText, price.innerText, imgCard.src);
 }
-
 
 shoppingCartButton.addEventListener("click", () => {
     const isVisible = shoppingCartMenu.style.display === "block";
