@@ -12,6 +12,7 @@ html, body {
     overflow-x: hidden;
     scroll-behavior: smooth;
     overflow: auto;
+    overflow-x: hidden
 }
 
 body {
@@ -313,7 +314,7 @@ header{
     padding-top: 50px;
     border-radius: 25px;
     border-bottom: 5px solid #7aa5d2;
-    height: 940px;
+    height: 1000px;
     width: 95vw;
     margin-left: 2%;
     box-shadow: 0 0 10px;
@@ -414,6 +415,34 @@ header{
     background-color: #FAC846;
     box-shadow: 0 0 10px;
 }
+
+#pages-product-buttons-sec{
+    height: 50px;
+    margin: auto;
+    width: 30%;
+    padding-left: 10px;
+    margin-top: 25px;
+}
+
+#pages-product-buttons-sec img:hover{
+    filter: invert(100%) sepia(75%) saturate(4625%) hue-rotate(319deg) brightness(99%) contrast(98%);
+}
+
+.pages-product-buttons{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+#pages-product-leftbutton{
+
+}
+
+#pages-product-rightbutton{
+    float: right;
+}
+
 /*Buy-Box*/
 /*-------------------------------------------------------------*/
 /*Filter-Container*/
@@ -456,17 +485,33 @@ header{
 #cart{
     display: none; /* Vai ser usado o JS para mostrar o carrinho */
     position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
     z-index: 3;
     top: 95px;
     right: 0;
     border-top: 6px solid #5093da;
     border-bottom: 6px solid #5093da;
     background-color: #eef5fc;
-    width: 350px;
+    width: 400px;
     border-radius: 25px;
     height: 350px;
     box-shadow: -10px 10px 25px;
 
+}
+
+#cart::-webkit-scrollbar{
+    background: none;
+}
+
+#cart::-webkit-scrollbar-thumb{
+    background-color: #7aa5d2;
+    border-radius: 25px;
+}
+
+#cart::-webkit-scrollbar-track{
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 #cart h3{
@@ -502,7 +547,7 @@ header{
     margin-right: 50px;
 }
 
-#cart-products span, #cart-products-template span{
+#cart-products #price, #cart-products-template #price{
     font-weight: 900;
     font-size: 1.3em;
     margin-right: 20px;
@@ -512,8 +557,75 @@ header{
     border-radius: 15px;
 }
 
+#cart-products #qnt, #cart-products-template #qnt{
+    margin-top: 4px;
+}
+
+.updown-buttons{
+    position: relative;
+    background: none;
+    border: none;
+    height: 50px;
+    margin-right: -45px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#up-qnt-button{
+    right: 105px;
+    top: -19px;
+    filter: invert(94%) sepia(52%) saturate(3115%) hue-rotate(319deg) brightness(98%) contrast(99%);
+}
+
+#down-qnt-button{
+    right: 105px;
+    top: 80px;
+    filter: invert(94%) sepia(52%) saturate(3115%) hue-rotate(319deg) brightness(98%) contrast(99%);
+}
+
+#cart-products #qnt, #cart-products-template #qnt{
+    font-weight: 900;
+    font-size: 1.3em;
+    margin-right: 20px;
+    line-height: 100px;
+    border-radius: 15px;
+}
+
 .image-carts{
     height: 80px;
+    width: 55px;
+}
+
+.delete-singular{
+    height: 54px;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 31px;
+}
+
+.delete-singular:hover{
+    background-color: #c0d6ec;
+}
+
+#delete-all{
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+
+#delete-all button{
+    border-radius: 20px;
+    width: 120px;
+    height: 25px;
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#delete-all button:hover{
+    background-color: #c0d6ec;
 }
 
 /*Cart-Menu*/
@@ -595,7 +707,8 @@ header{
 }
 
 /*Footer*/
-
+/*-------------------------------------------------------------*/
+/*Animations*/
 
 #cart-anima-img{
     position: fixed;
@@ -641,3 +754,5 @@ header{
         opacity: 0;
     }
 }
+
+/*Animations*/
