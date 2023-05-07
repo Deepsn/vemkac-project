@@ -26,7 +26,6 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb{
     background-color: #7aa5d2;
-    border-radius: 25px;
 }
 
 body::-webkit-scrollbar-thumb:hover{
@@ -190,10 +189,12 @@ header{
 }
 
 .banner-img{
+    object-fit: cover;
     animation: slideshow-fading 10s infinite;
     position: relative;
     width: 100%;
     border-radius: 25px;
+    height: 450px;
     z-index: 1;
     transition: all .5s;
 }
@@ -222,16 +223,7 @@ header{
 
 /*Banner*/
 
-.content-container{
-    border-top: 5px solid #7aa5d2;
-    padding-top: 50px;
-    border-radius: 25px;
-    border-bottom: 5px solid #7aa5d2;
-    height: 940px;
-    width: 95vw;
-    margin-left: 2%;
-    box-shadow: 0 0 10px;
-}
+
 
 /*-------------------------------------------------------------*/
 /*Best-container*/
@@ -248,18 +240,20 @@ header{
 
 #titlebest{
     text-align: center;
-    border-radius: 25px;
     width: 90%;
-    box-shadow: 0 0 10px;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-top: -20px;
+    margin-bottom: 20px;
     margin: 15px auto;
 }
 
 #promo-container{
     display: grid;
-    margin-left: 8%;
     margin-top: 40px;
     margin-bottom: 30px;
     grid-template-columns: repeat(6, 0fr);
+    justify-content: center;
     grid-gap: 7%;
 }
 
@@ -312,23 +306,35 @@ header{
 /*-------------------------------------------------------------*/
 /*Buy-Box*/
 
+.content-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-top: 5px solid #7aa5d2;
+    padding-top: 50px;
+    border-radius: 25px;
+    border-bottom: 5px solid #7aa5d2;
+    height: 940px;
+    width: 95vw;
+    margin-left: 2%;
+    box-shadow: 0 0 10px;
+}
+
 #buy-container{
+    display: grid;
     float: right;
+    justify-content: center;
     padding-top: 40px;
-    padding-left: 30px;
     padding-bottom: 40px;
     box-shadow: 0 0 10px;
-    width: 730px;
     border-radius: 25px;
     margin-right: 50px;
+    margin-bottom: 30px;
 }
 
 .titles{
-    margin-left: 20px;
     text-align: center;
-    border-radius: 25px;
-    width: 90%;
-    box-shadow: 0 0 10px;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
     margin-top: -20px;
     margin-bottom: 20px;
 }
@@ -336,7 +342,7 @@ header{
 #buy-section{
     display: grid;
     grid-template-columns: repeat(3, 3fr);
-    grid-row-gap: 20px;
+    grid-gap: 20px;
     
 }
 
@@ -415,14 +421,15 @@ header{
 #filter-container{
     display: inline-block;
     margin-left: 50px;
-    box-shadow: 0 0 10px;
+    width: 250px;
+    height: 55%;
     border-radius: 25px;
     padding: 20px;
 }
 
 #filter-container h2{
-    box-shadow: 0 0 10px;
-    border-radius: 20px;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
     text-align: center;
     font-weight: 900;
 
@@ -447,10 +454,15 @@ header{
 /*Cart-Menu*/
 
 #cart{
+    display: none; /* Vai ser usado o JS para mostrar o carrinho */
+    position: absolute;
+    z-index: 3;
+    top: 95px;
+    right: 0;
     border-top: 6px solid #5093da;
     border-bottom: 6px solid #5093da;
     background-color: #eef5fc;
-    width: 300px;
+    width: 350px;
     border-radius: 25px;
     height: 350px;
     box-shadow: -10px 10px 25px;
@@ -466,7 +478,7 @@ header{
     border-radius: 50%;
 }
 
-#cart-products{
+#cart-products, #cart-products-template{
     display: flex;
     justify-content: flex-end;
     border-bottom: 1px solid black;
@@ -476,17 +488,21 @@ header{
     padding-top: 10px;
 }
 
+#cart-products-template {
+    display: none;
+}
+
 .cart-img-products{
     margin: auto;
 }
 
-#cart-products p{
+#cart-products p, #cart-products-template p{
     font-weight: 900;
     line-height: 100px;
     margin-right: 50px;
 }
 
-#cart-products span{
+#cart-products span, #cart-products-template span{
     font-weight: 900;
     font-size: 1.3em;
     margin-right: 20px;
@@ -495,8 +511,6 @@ header{
     border-top: 5px solid #FAC846;
     border-radius: 15px;
 }
-
-
 
 .image-carts{
     height: 80px;
@@ -574,13 +588,40 @@ header{
     grid-row-gap: 15px;
 }
 
+#credits{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /*Footer*/
 
-footer {
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    
+
+#cart-anima-img{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 4;
+    animation: 1s cart-bouncing ease-in-out;
+    display: none;
+}
+
+@keyframes cart-bouncing{
+    10%{
+        transform: rotate(15deg);
+    }
+    30%{
+        transform: rotate(-15deg);
+    }
+    60%{
+        transform: rotate(15deg);
+    }
+    80%{
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform: rotate(15deg);
+    }
 }
 
 @keyframes slideshow-fading {
