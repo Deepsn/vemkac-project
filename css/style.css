@@ -269,6 +269,8 @@ header{
     grid-gap: 7%;
     padding-top: 10px;
     padding-bottom: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .promo-box{
@@ -462,7 +464,7 @@ header{
 /*Filter-Container*/
 
 #filter-container{
-    display: block;
+    display: flex;
     width: 100%;
     margin: auto;
     justify-content: space-around;
