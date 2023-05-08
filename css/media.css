@@ -46,8 +46,12 @@
     }
     .buy-box{
         width: 162px;
-        margin-top: 10px;
+        margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    .description h4{
+        float: none;
     }
     .content-container{
         display: block;
@@ -66,6 +70,7 @@
         padding-bottom: 0px;
         margin-top: 0px;
         margin-bottom: 0px;
+        font-size: 2em;
     }
     
     .pages-product-buttons{
@@ -268,6 +273,9 @@
     #menu a:hover{
         background-color: #FAC846;
         border-radius: 25px;
+    }
+    .block-info{
+        display: none;
     }
 }
 
