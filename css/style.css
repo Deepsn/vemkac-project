@@ -187,6 +187,18 @@ header{
     color: rgb(201, 201, 201);
 }
 
+#menu{
+    position: absolute;
+    display: none;
+    background-color: #7aa5d2;
+    border-radius: 25px;
+    width: 95%;
+    margin-left: 2.5%;
+    height: 300px;
+    top: 160px;
+    z-index: 4;
+}
+
 /*Header*/
 /*-------------------------------------------------------------*/
 /*Banner*/
@@ -495,6 +507,81 @@ header{
 
 .filter-blocks img{
     text-align: right;
+}
+
+.dropdown-menu{
+    display: block;
+    width: 180px;
+    margin-bottom: -130px;
+    margin-right: -210px;
+}
+.dropdown-menu2{
+    display: block;
+    width: 180px;
+    margin-bottom: -130px;
+    margin-right: -210px;
+}
+
+.dropdown-menu3{
+    display: block;
+    width: 180px;
+    margin-bottom: -130px;
+    margin-right: -210px;
+}
+
+.dropdown-button{
+    display: block;
+    position: relative;
+    background-color: #7aa5d2;
+    width: 180px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2em;
+    font-weight: 900;
+    left: -637px;
+    top: 48px;
+    z-index: 2;
+}
+.dropdown-button2{
+    display: block;
+    position: relative;
+    background-color: #7aa5d2;
+    width: 180px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.0em;
+    font-weight: 900;
+    left: -425px;
+    top: 48px;
+    z-index: 2;
+}
+.dropdown-button3{
+    display: block;
+    position: relative;
+    background-color: #7aa5d2;
+    width: 180px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2em;
+    font-weight: 900;
+    left: -215px;
+    top: 48px;
+    z-index: 2;
+}
+
+.dropdown-button input{
+    appearance: none;
+}
+
+.dropdown-button2 input{
+    appearance: none;
+}
+
+.dropdown-button3 input{
+    appearance: none;
 }
 
 /*Filter-Container*/

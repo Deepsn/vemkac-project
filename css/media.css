@@ -183,5 +183,91 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
+
+    .dropdown-menu{
+        display: none;
+        width: 180px;
+        margin-bottom: -130px;
+    }
+    .dropdown-menu2{
+        display: none;
+        width: 180px;
+        margin-bottom: -130px;
+    }
+
+    .dropdown-menu3{
+        display: none;
+        width: 180px;
+        margin-bottom: -130px;
+    }
+
+    .dropdown-button{
+        display: block;
+        position: relative;
+        background-color: #7aa5d2;
+        width: 180px;
+        height: 50px;
+        border: none;
+        border-radius: 20px;
+        font-size: 1.2em;
+        font-weight: 900;
+        top: -127px;
+        z-index: 2;
+    }
+    .dropdown-button2{
+        display: block;
+        position: relative;
+        background-color: #7aa5d2;
+        width: 180px;
+        height: 50px;
+        border: none;
+        border-radius: 20px;
+        font-size: 1.0em;
+        font-weight: 900;
+        top: -64px;
+        z-index: 2;
+    }
+    .dropdown-button3{
+        display: block;
+        position: relative;
+        background-color: #7aa5d2;
+        width: 180px;
+        height: 50px;
+        border: none;
+        border-radius: 20px;
+        font-size: 1.2em;
+        font-weight: 900;
+        top: 0px;
+        z-index: 2;
+    }
+    #menu{
+        position: absolute;
+        display: block;
+        background-color: #7aa5d2;
+        border-radius: 25px;
+        width: 95%;
+        margin-left: 2.5%;
+        height: 300px;
+        top: 160px;
+        z-index: 4;
+    }
+    #menu a{
+        display: flex;
+        justify-content: center;
+        border-bottom: 3px solid white;
+        margin-top: 20px;
+        padding-bottom: 15px;
+        font-size: 1.6em;
+        font-weight: 900;
+        margin-left: 25px;
+        margin-right: 25px;
+        color: white;
+        text-decoration: none;
+        transition: all 0.5s;
+    }
+    #menu a:hover{
+        background-color: #FAC846;
+        border-radius: 25px;
+    }
 }
 
