@@ -78,7 +78,7 @@ function updateCart() {
 
         function updateItem() {
             cartItemName.innerText = item.nome;
-            cartItemPrice.innerText = item.preco;
+            cartItemPrice.innerText = "R$: " + item.preco;
             cartItemAmount.innerText = item.quantidade + "x";
             cartCardImg.src = item.imagem;
         }
@@ -92,9 +92,10 @@ function updateCart() {
 
     // update total price
     const totalPrice = shoppingCartButton.querySelector("p");
-    let total = shoppingCart.reduce((total, item) => total + (Number(item.preco.slice(2).replaceAll(",", ".")) * item.quantidade), 0);
+    let total = shoppingCart.reduce((total, item) => total + (Number(item.preco.replaceAll(",", ".")) * item.quantidade), 0);
 
     if (isNaN(total)) {
+        console.error("Erro ao calcular o preço total do carrinho");
         total = 0;
     }
 
@@ -153,9 +154,9 @@ shoppingCartButton.addEventListener("click", () => {
     shoppingCartMenu.style.display = isVisible ? "none" : "block";
 });
 
-addToCartButtons.forEach(button => {
-    button.addEventListener("click", onAddToCartClick);
-});
+// addToCartButtons.forEach(button => {
+//     button.addEventListener("click", onAddToCartClick);
+// });
 
 clearAllCartButton.addEventListener("click", () => {
     shoppingCart = [];

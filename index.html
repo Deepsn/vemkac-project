@@ -8,14 +8,20 @@
         <link rel="stylesheet" href="css/media.css" media="">
         <link rel="shortcut icon" href="assets/logoA.png" type="image/x-icon">
         
+        <script defer src="js/itens.js"></script>
+        <script defer src="js/filters.js"></script>
+        <script defer src="js/products.js"></script>
         <script defer src="js/slideshow.js"></script>
         <script defer src="js/shoppingmenu.js"></script>
-        <script defer src="js/filters.js"></script>
+        <script defer src="js/menu.js"></script>
 
         <title>Supermercado A</title>
     </head>
 
     <body>
+        <div id="cart-anima">
+            <img src="assets/svg/shoppingcart.svg" alt="" id="cart-anima-img">
+        </div>
         <header>
             <img class="logo" src="assets/logoA.png">
             
@@ -32,17 +38,18 @@
                 <section id="itens">
                     <a href="#filter-container">Produtos</a>
                     <a href="#promo-container">Promoções</a>
-                    <a href="">Pagamento</a>
-                    <a href="">Sobre nós</a>
+                    <a href="#social-medias">Pagamento</a>
+                    <a href="#forms">Contato</a>
+                    <a href="#credits">Sobre nós</a>
                     <img src="assets/svg/menu_FILL0_wght400_GRAD0_opsz48.svg" alt="">
                 </section>
             </nav>
 
-            <section id="menu">
+            <section class="menu-hide" id="menu">
                 <a href="#filter-container">Produtos</a>
                 <a href="#promo-container">Promoções</a>
-                <a href="#">Pagamento</a>
-                <a href="#">Sobre nós</a>
+                <a href="#social-media">Pagamento</a>
+                <a href="#forms">Contato</a>
             </section>
         </header>
         
@@ -163,32 +170,61 @@
 
             <section class="content-container">
                 <section id="buy-container">
-                    
                     <div class="titles">
                         <h2>Produtos</h2>
                     </div>
+                    
                     <section id="filter-container">
                         <div class="dropdown">
                             <div class="dropdown-title">
-                                <h3>Tipos</h3>
+                                <h3>Categorias</h3>
                                 <img src="assets/svg/expand_more_FILL0_wght400_GRAD0_opsz48.svg" alt="">
                             </div>
                             
                             <section class="dropdown-content">
                                 <div class="dropdown-button">
-                                    <input id="btn_carnes" type="radio" name="dropdown-buttons-1">
+                                    <input id="btn_carnes" type="checkbox" name="dropdown-buttons-1">
                                     <label for="btn_carnes">Carnes</label>
                                 </div>
 
                                 <div class="dropdown-button">
-                                    <input id="btn_bebidas" type="radio" name="dropdown-buttons-1">
+                                    <input id="btn_bebidas" type="checkbox" name="dropdown-buttons-1">
                                     <label for="btn_bebidas">Bebidas</label>
                                 </div>
 
                                 <div class="dropdown-button">
-                                    <input id="btn_vegetais" type="radio" name="dropdown-buttons-1">
-                                    <label for="btn_vegetais">Vegetais</label>
+                                    <input id="btn_vegetais" type="checkbox" name="dropdown-buttons-1">
+                                    <label for="btn_vegetais">Verduras e Legumes</label>
                                 </div>
+                                <div class="dropdown-button">
+                                    <input id="btn_margarinas" type="checkbox" name="dropdown-buttons-1">
+                                    <label for="btn_margarinas">Margarinas</label>
+                                </div>
+                                <div class="dropdown-button">
+                                    <input id="btn_graos" type="checkbox" name="dropdown-buttons-1">
+                                    <label for="btn_graos">Grãos</label>
+                                </div>
+                                <div class="dropdown-button">
+                                    <input id="btn_temperos" type="checkbox" name="dropdown-buttons-1">
+                                    <label for="btn_temperos">Temperos</label>
+                                </div>
+                                <div class="dropdown-button">
+                                    <input id="btn_doces" type="checkbox" name="dropdown-buttons-1">
+                                    <label for="btn_doces">Doces</label>
+                                </div>
+                                <div class="dropdown-button">
+                                    <input id="btn_higiene" type="checkbox" name="dropdown-buttons-1">
+                                    <label for="btn_higiene">Higiene e Limpeza</label>
+                                </div>
+                                <div class="dropdown-button">
+                                    <input id="btn_frutas" type="checkbox" name="dropdown-buttons-1">
+                                    <label for="btn_frutas">Frutas</label>
+                                </div>
+                                <div class="dropdown-button">
+                                    <input id="btn_peixes" type="checkbox" name="dropdown-buttons-1">
+                                    <label for="btn_peixes">Peixes e Derivados</label>
+                                </div>
+                                
                             </section>
                         </div>
 
@@ -242,111 +278,30 @@
                     </section>
 
                     <section id="buy-section">
-                        <div class="buy-box">
+                        <div class="buy-box-template">
                             <div class="img-buybox">
                                 <img src="assets/produtos/img15.png" alt="" class="buy-img">
                                 
                             </div>
-                                <div class="description">
-                                    <h3>
-                                        Leite Moça
-                                    </h3>
-                                    <h4>
-                                        R$3,99
-                                    </h4>
-                                    <p>
-                                        Leitinho Gostosinho da Moça
-                                    </p>
-                                </div>
-                                <div class="div-add-button">
-                                    <button class="add-button">Adicionar ao Carrinho</button>
-                                </div>
-                                
-                        </div>
-                        <div class="buy-box">
-                            <div class="img-buybox">
-                                <img src="assets/produtos/img13.png" alt="" class="buy-img">
-                                
+
+                            <div class="description">
+                                <h3>
+                                    
+                                </h3>
+                                <h4>
+                                    
+                                </h4>
+                                <p>
+                                    
+                                </p>
                             </div>
-                                <div class="description">
-                                    <h3>
-                                        Blueville
-                                    </h3>
-                                    <h4>
-                                        R$3,99
-                                    </h4>
-                                    <p>
-                                        Leitinho Gostosinho da Moça
-                                    </p>
-                                </div>
-                                <div class="div-add-button">
-                                    <button class="add-button">Adicionar ao Carrinho</button>
-                                </div>
-                                
-                        </div>
-                        <div class="buy-box">
-                            <div class="img-buybox">
-                                <img src="assets/produtos/img11.png" alt="" class="buy-img">
-                                
+
+                            <div class="div-add-button">
+                                <button class="add-button"><img src="assets/svg/add_FILL0_wght400_GRAD0_opsz48.svg" alt=""></button>
                             </div>
-                                <div class="description">
-                                    <h3>
-                                        Toscaninha
-                                    </h3>
-                                    <h4>
-                                        R$3,99
-                                    </h4>
-                                    <p>
-                                        Leitinho Gostosinho da Moça
-                                    </p>
-                                </div>
-                                <div class="div-add-button">
-                                    <button class="add-button">Adicionar ao Carrinho</button>
-                                </div>
-                                
                         </div>
-                        <div class="buy-box">
-                            <div class="img-buybox">
-                                <img src="assets/produtos/img10.png" alt="" class="buy-img">
-                                
-                            </div>
-                                <div class="description">
-                                    <h3>
-                                        Linguiçinha
-                                    </h3>
-                                    <h4>
-                                        R$3,99
-                                    </h4>
-                                    <p>
-                                        Leitinho Gostosinho da Moça
-                                    </p>
-                                </div>
-                                <div class="div-add-button">
-                                    <button class="add-button">Adicionar ao Carrinho</button>
-                                </div>
-                                
-                        </div>
-                        <div class="buy-box">
-                            <div class="img-buybox">
-                                <img src="assets/produtos/img9.png" alt="" class="buy-img">
-                                
-                            </div>
-                                <div class="description">
-                                    <h3>
-                                        Vegetais
-                                    </h3>
-                                    <h4>
-                                        R$3,99
-                                    </h4>
-                                    <p>
-                                        Leitinho Gostosinho da Moça
-                                    </p>
-                                </div>
-                                <div class="div-add-button">
-                                    <button class="add-button">Adicionar ao Carrinho</button>
-                                </div>
-                                
-                        </div>
+
+                        
                     </section>
                     
                     <!---
@@ -360,14 +315,13 @@
                 </section>
                 <section id="show-product">
                     <div id="show-image">
-                        <img src="assets/produtos/img34.png" alt="" class="show-product-image">
+                        <img src="" alt="" class="show-product-image">
                     </div>
                     <div id="show-product-price">
-                        <h3>R$3,99</h3>
+                        <h3></h3>
                     </div>
                     <section id="show-description">
-                        <h3>Batatão Doce</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis temporibus ipsum, fugiat velit itaque incidunt sit praesentium dignissimos dolorem odit placeat</p>
+                        <h3></h3>
                     </section>
                     
                     <button id="show-button">
@@ -402,13 +356,11 @@
                     <button class="delete-singular"><img src="assets/svg/close_FILL0_wght400_GRAD0_opsz48.svg" alt=""></button>
                 </article>
                 <div id="delete-all">
-                    <button>Limpar Carrinho</button>
+                    <button><img src="assets/svg/delete_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="trash-img"></button>
                 </div>
             </section>
 
-            <div id="cart-anima">
-                <img src="assets/svg/shoppingcart.svg" alt="" id="cart-anima-img">
-            </div>
+            
         </main>
 
         
@@ -497,6 +449,10 @@
         </section>
 
             <section id="credits">
+                Guilherme F. | RGM: 34103856<br>
+                Nicolas A. | RGM: 32978219<br>
+                Matheus T. | RGM: 34185291<br>
+                Marcos A. | RGM: 33712816<br>
                 Supermercado A&trade; - Todos direitos reservados &copy;
             </section>
             
