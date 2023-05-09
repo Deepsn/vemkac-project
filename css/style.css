@@ -467,6 +467,7 @@ header{
     float: right;
 }
 
+
 /*Buy-Box*/
 /*-------------------------------------------------------------*/
 /*Filter-Container*/
@@ -953,6 +954,58 @@ header{
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+#forms{
+    width: 95%;
+    margin: auto;
+    box-shadow: 0 0 10px;
+    border-radius: 25px;
+    border-top: 5px solid #5093da;
+    border-bottom: 5px solid #5093da;
+    height: 450px;
+    margin-top: 25px;
+}
+
+.form-box{
+    text-align: center;
+    margin-top: 5px;
+    width: 300px;
+    height: 50px;
+}
+
+#forms h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+#forms form{
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    flex-direction: column;
+    width: 300px;
+    height: 320px;
+    box-shadow: 0 0 10px;
+    border-radius: 25px;
+    border-top: 5px solid #5093da;
+    border-bottom: 5px solid #5093da;
+}
+
+#forms form input{
+    border-radius: 10px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+
+
+textarea{
+    width: 250px;
+    height: 100px;
+    border-radius: 25px;
+    resize: none;
 }
 
 /*Footer*/
