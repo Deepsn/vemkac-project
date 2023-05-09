@@ -10,6 +10,7 @@
         
         <script defer src="js/slideshow.js"></script>
         <script defer src="js/shoppingmenu.js"></script>
+        <script defer src="js/filters.js"></script>
 
         <title>Supermercado A</title>
     </head>
@@ -168,35 +169,79 @@
                         <h2>Produtos</h2>
                     </div>
                     <section id="filter-container">
-                        <button class="filter-blocks">
-                            <h3>Tipos</h3>
-                            <img src="assets/svg/expand_more_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                        <div class="dropdown">
+                            <div class="dropdown-title">
+                                <h3>Tipos</h3>
+                                <img src="assets/svg/expand_more_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                            </div>
                             
-                        </button>
-                        <button class="filter-blocks">
-                            <h3>Valores</h3>
-                            <img src="assets/svg/expand_more_FILL0_wght400_GRAD0_opsz48.svg" alt="">
-                        </button>
-                        <button class="filter-blocks">
-                            <h3>Ordenar</h3>
-                            <img src="assets/svg/expand_more_FILL0_wght400_GRAD0_opsz48.svg" alt="">
-                        </button>
-                        <section class="dropdown-menu">
-                            <button class="dropdown-button"><input type="radio">Carnes</button>
-                            <button class="dropdown-button"><input type="radio">Bebidas</button>
-                            <button class="dropdown-button"><input type="radio">Vegetais</button>
-                        </section>
-                        <section class="dropdown-menu2">
-                            <button class="dropdown-button2"><input type="radio">R$0,99 à R$9,99</button>
-                            <button class="dropdown-button2"><input type="radio">R$9,99 à R$49,99</button>
-                            <button class="dropdown-button2"><input type="radio">R$49,99 à R$99,99</button>
-                        </section>
-                        <section class="dropdown-menu3">
-                            <button class="dropdown-button3"><input type="radio">A-Z</button>
-                            <button class="dropdown-button3"><input type="radio">Caro - Barato</button>
-                            <button class="dropdown-button3"><input type="radio">Barato - Caro</button>
-                        </section>
+                            <section class="dropdown-content">
+                                <div class="dropdown-button">
+                                    <input id="btn_carnes" type="radio" name="dropdown-buttons-1">
+                                    <label for="btn_carnes">Carnes</label>
+                                </div>
+
+                                <div class="dropdown-button">
+                                    <input id="btn_bebidas" type="radio" name="dropdown-buttons-1">
+                                    <label for="btn_bebidas">Bebidas</label>
+                                </div>
+
+                                <div class="dropdown-button">
+                                    <input id="btn_vegetais" type="radio" name="dropdown-buttons-1">
+                                    <label for="btn_vegetais">Vegetais</label>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="dropdown">
+                            <div class="dropdown-title">
+                                <h3>Valores</h3>
+                                <img src="assets/svg/expand_more_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                            </div>
+                            
+                            <section class="dropdown-content">
+                                <div class="dropdown-button">
+                                    <input id="btn_price1" type="radio" name="dropdown-buttons-2">
+                                    <label for="btn_price1">R$0,99 à R$9,99</label>
+                                </div>
+
+                                <div class="dropdown-button">
+                                    <input id="btn_price2" type="radio" name="dropdown-buttons-2">
+                                    <label for="btn_price2">R$9,99 à R$49,99</label>
+                                </div>
+
+                                <div class="dropdown-button">
+                                    <input id="btn_price3" type="radio" name="dropdown-buttons-2">
+                                    <label for="btn_price3">R$49,99 à R$99,99</label>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="dropdown">
+                            <div class="dropdown-title">
+                                <h3>Ordenar</h3>
+                                <img src="assets/svg/expand_more_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                            </div>
+                            
+                            <section class="dropdown-content">
+                                <div class="dropdown-button">
+                                    <input id="btn_sort1" type="radio" name="dropdown-buttons-3">
+                                    <label for="btn_sort1">A - Z</label>
+                                </div>
+
+                                <div class="dropdown-button">
+                                    <input id="btn_sort2" type="radio" name="dropdown-buttons-3">
+                                    <label for="btn_sort2">Caro - Barato</label>
+                                </div>
+
+                                <div class="dropdown-button">
+                                    <input id="btn_sort3" type="radio" name="dropdown-buttons-3">
+                                    <label for="btn_sort3">Barato - Caro</label>
+                                </div>
+                            </section>
+                        </div>
                     </section>
+
                     <section id="buy-section">
                         <div class="buy-box">
                             <div class="img-buybox">
