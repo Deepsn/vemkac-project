@@ -58,6 +58,8 @@ function createProduct(product) {
 
     if (selectedProduct && selectedProduct.nome === product.nome) {
         onClick();
+    } else if (!selectedProduct) {
+        onClick();
     }
 
     addButton.addEventListener("click", onClickAdd);
@@ -118,6 +120,7 @@ function createProducts() {
 }
 
 function cleanup() {
+    selectedProduct = null;
     for (let disconnect of disconnectFunctions) {
         if (!disconnect) continue;
         disconnect();
