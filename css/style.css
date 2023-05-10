@@ -107,8 +107,7 @@ header{
 }
 
 #header-nav{
-    justify-content: center;
-    margin-right: 10px;
+    margin: auto;
 }
 
 #header-nav button:hover{
