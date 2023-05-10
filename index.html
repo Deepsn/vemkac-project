@@ -14,6 +14,7 @@
         <script defer src="js/slideshow.js"></script>
         <script defer src="js/shoppingmenu.js"></script>
         <script defer src="js/menu.js"></script>
+        <script defer src="js/search.js"></script>
 
         <title>Supermercado A</title>
     </head>
@@ -25,16 +26,9 @@
         <header>
             <img class="logo" src="assets/logoA.png">
             
-            <input id="searchbox" type="text" placeholder="O que deseja?">
+            
 
             <nav id="header-nav">
-                <button id="shoppingcart">
-                    <img src="assets/svg/shoppingcart.svg">
-                    <p></p>
-                </button>
-            </nav>
-
-            <nav id="header-navbottom">
                 <section id="itens">
                     <a href="#filter-container">Produtos</a>
                     <a href="#promo-container">Promoções</a>
@@ -43,7 +37,23 @@
                     <a href="#credits">Sobre nós</a>
                     <img src="assets/svg/menu_FILL0_wght400_GRAD0_opsz48.svg" alt="">
                 </section>
+                
             </nav>
+            <button id="shoppingcart">
+                    <img src="assets/svg/shoppingcart.svg">
+                    <p></p>
+                </button>
+
+            <!--<nav id="header-navbottom">
+                <section id="itens">
+                    <a href="#filter-container">Produtos</a>
+                    <a href="#promo-container">Promoções</a>
+                    <a href="#social-medias">Pagamento</a>
+                    <a href="#forms">Contato</a>
+                    <a href="#credits">Sobre nós</a>
+                    <img src="assets/svg/menu_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                </section>
+            </nav>-->
 
             <section class="menu-hide" id="menu">
                 <a href="#filter-container">Produtos</a>
@@ -57,6 +67,7 @@
         <main>
             <section id="initial-banner">
                 <div class="banner">
+                    <img src="assets/banners/banner-principal-min.png" alt="" class="banner-img">
                     <img src="assets/banners/carne.jpg" alt="" class="banner-img">
                     <img src="assets/banners/qualy.jpg" alt="" class="banner-img">
                     <img src="assets/banners/vinho-preto.jpg" alt="" class="banner-img">
@@ -172,6 +183,18 @@
                 <section id="buy-container">
                     <div class="titles">
                         <h2>Produtos</h2>
+                        <section id="search-cont">
+                            <input id="searchbox" type="text" placeholder="O que deseja?">
+                            <div id="search-drop">
+                                <h4>Caipirinha</h4>
+                                <h4>Caipirinha</h4>
+                                <h4>Caipirinha</h4>
+                                <h4>Caipirinha</h4>
+                                <h4>Caipirinha</h4>
+                                
+                            </div>
+                        </section>
+                        
                     </div>
                     
                     <section id="filter-container">
@@ -332,6 +355,7 @@
                 </section>
                     
             </section>
+
             <section id="cart">
                 <h3>Carrinho</h3>
                 <article id="cart-products-template">
@@ -359,7 +383,6 @@
                     <button><img src="assets/svg/delete_FILL0_wght400_GRAD0_opsz48.svg" alt="" id="trash-img"></button>
                 </div>
             </section>
-
             
         </main>
 

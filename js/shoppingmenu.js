@@ -2,7 +2,9 @@ const shoppingCartButton = document.querySelector("#shoppingcart");
 const shoppingCartMenu = document.querySelector("#cart");
 const addToCartButtons = document.querySelectorAll(".add-button");
 const clearAllCartButton = cart.querySelector("#delete-all > button");
+const cartAnima = document.querySelector("#cart-anima");
 let shoppingCart = localStorage.getItem("shoppingCart");
+let currentCartAnimaId = null;
 
 if (!shoppingCart) {
     shoppingCart = [];
@@ -114,6 +116,15 @@ function addToCart(nome, preco, imagem) {
     
     if (oldItem) {
         shoppingCart[shoppingCart.indexOf(oldItem)] = item;
+
+        if (currentCartAnimaId) clearTimeout(currentCartAnimaId);
+
+        cartAnima.style.display = "block";
+
+        currentCartAnimaId = setTimeout(() => {
+            currentCartAnimaId = null;
+            cartAnima.style.display = "none";
+        }, 1000);
         
     } else {
         shoppingCart.push(item);

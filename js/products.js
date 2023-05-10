@@ -99,17 +99,20 @@ function createProducts() {
             }
         }
 
+        if (filtersApplied["dropdown-buttons-4"]) {
+            let filter = filtersApplied["dropdown-buttons-4"];
+
+            pass = filter.check(product);
+        }
+
         return pass;
     });
-
-    console.log(filteredItens, filtersApplied);
+    
     if (filtersApplied["dropdown-buttons-3"]) {
         let filter = filtersApplied["dropdown-buttons-3"];
 
         filteredItens.sort((a, b) => filter.check(a, b));
     }
-
-    console.log(filteredItens, filtersApplied);
 
     disconnectFunctions = filteredItens.map((product) => createProduct(product));
 }

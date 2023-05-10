@@ -35,7 +35,8 @@ body::-webkit-scrollbar-thumb:hover{
 /*Header*/
 
 header{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.2fr;
     background-color: #7aa5d2;
     box-shadow: 0 0 15px black;
     height: 100px;
@@ -46,10 +47,32 @@ header{
 
 #searchbox {
     border-radius: 25px;
-    width: 700px;
+    background-color: rgb(199, 199, 199);
+    width: 200px;
     height: 30px;
     text-align: center;
     border: none;
+}
+
+#search-drop{
+    display: none;
+    position: relative;
+    background-color: rgb(224, 224, 224);
+    width: 200px;
+    border-radius: 25px;
+    margin: auto;
+    margin-bottom: -200px;
+    height: 200px;
+    z-index: 3;
+    overflow-y: auto;
+}
+
+#search-drop h4{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid black;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #searchbox:focus, #searchbox textarea:focus{
@@ -62,6 +85,7 @@ header{
 
 #shoppingcart {
     background: none;
+    grid-area: div4;
     border: none;
     cursor: pointer;
     border-radius: 50%;
@@ -75,8 +99,9 @@ header{
     transition: all 0.4s;
 }
 
-#header-nav {
-    display: flex;
+#header-nav{
+    
+    justify-content: center;
     margin-right: 10px;
 }
 
@@ -158,8 +183,8 @@ header{
 }
 
 #itens{
+    grid-area: div3;
     margin-top: 12px;
-    margin: auto;
     margin-bottom: 15px;
 }
 
@@ -725,8 +750,6 @@ header{
     box-shadow: -10px 10px 25px;
 }
 
-
-
 #cart::-webkit-scrollbar{
     background: none;
 }
@@ -1033,9 +1056,13 @@ textarea{
 /*Animations*/
 #cart-anima{
     position: fixed;
+    background-color: rgba(133, 133, 133, 0.418);
+    padding-left: 8px;
+    padding-top: 8px;
     right: 50px;
-    width: 15px;
-    height: 15px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
     bottom: 50px;
     z-index: 4;
     animation: 1s cart-bouncing infinite;

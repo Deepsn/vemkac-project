@@ -1,4 +1,4 @@
-@media (min-width: 676px) and (max-width: 1070px){
+@media (min-width: 769px) and (max-width: 1090px) {
     #show-product{
         display: none;
     }
@@ -55,10 +55,20 @@
         margin-left: 25px;
         margin-right: 25px;
     }
+    .block-info{
+        display: none;
+    }
+
+    #pay-block{
+        border: none;
+    }
+
+    .dropdown-button:hover{
+        background-color: none;
+    }    
 }
 
-
-@media (max-width: 675px){
+@media (max-width: 768px){
     #itens img{
         display: block;
     }
@@ -149,7 +159,7 @@
     }
     .content-container{
         display: block;
-        height: 840px;
+        height: 890px;
     }
     #buy-container{
         display: block;
@@ -372,8 +382,47 @@
     }
 }
 
-@media (min-width: 675px) {
-    #menu {
+@media (min-width: 675px){
+    #menu{
         display: none;
     }
+}
+
+@media (max-width: 400px){
+    #cart-products p, #cart-products-template p{
+        font-weight: 900;
+        line-height: 100px;
+        font-size: 0.8em;
+    }
+    #cart-products #price, #cart-products-template #price{
+        font-weight: 900;
+        font-size: 0.8em;
+        line-height: 100px;
+        border-bottom: 5px solid #FAC846;
+        border-top: 5px solid #FAC846;
+        border-radius: 15px;
+    }
+    #cart-products #qnt, #cart-products-template #qnt{
+        margin-top: 4px;
+        font-size: 0.8em;
+    }
+    #price{
+        margin-right: 0px;
+    }
+    #qnt{
+        margin-right: 0px;
+    }
+    .image-carts{
+        height: 80px;
+        width: 55px;
+    }
+    .delete-singular{
+        height: 34px;
+        border-radius: 20px;
+        border: none;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin-top: 31px;
+    }
+
 }
